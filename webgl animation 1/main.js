@@ -139,25 +139,6 @@ window.onload = function init() {
     gl.uniform1f( gl.getUniformLocation(program, 
        "shininess"),materialShininess );
 
-
-    document.getElementById("animToggleButton").onclick = function() {
-        if( animFlag ) {
-            animFlag = false;
-        }
-        else {
-            animFlag = true;
-            resetTimerFlag = true;
-            window.requestAnimFrame(render);
-        }
-        //console.log(animFlag);
-		
-		controller = new CameraController(canvas);
-		controller.onchange = function(xRot,yRot) {
-			RX = xRot;
-			RY = yRot;
-			window.requestAnimFrame(render); };
-    };
-
     render(0);
 }
 
