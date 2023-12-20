@@ -1,5 +1,9 @@
 README.txt
 
+Assignment for software engingeering course. Exercise in python data analysis using pandas, and how matplotlib can be used to generate graphs. 
+
+Requires 3 yaml files in the same directory, containing the route, airline, and airport information. Files must be formatted as the given example files are.
+
 To run:
 
     Note: <> denotes a placeholder. Eg. Replace <yaml file> with routes.yaml

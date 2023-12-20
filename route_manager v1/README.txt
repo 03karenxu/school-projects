@@ -1,6 +1,8 @@
 README.txt
 
-Assignment for a software engineering course. Requires a csv file in the same directory which contains a list of airline routes, formatted as the example csv file "airline-routes-data.csv" is formatted.
+Assignment for a software engineering course. Exercise in c programming and csv data analysis. 
+
+Requires a csv file in the same directory which contains a list of airline routes, formatted as the example csv file "airline-routes-data.csv" is formatted.
 
 To compile:
 
