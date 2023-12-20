@@ -13,8 +13,6 @@ the example .csv file "airline-routes-data.csv" is formatted.
 
 Program can be run in one of the following ways:
 
-Note: <> denotes a placeholder, eg. Replace <airline code> with ETH for Ethiopian Airlines
-
 Case 1:
 
     $ ./route_manager --DATA="<csv file>" --AIRLINE="<airline code>" --DEST_COUNTRY="<country name>"`
@@ -27,6 +25,8 @@ Case 3:
 
     $ ./route_manager --DATA="<csv file>" --SRC_CITY="<city name>" --SRC_COUNTRY="<country name>" 
     --DEST_CITY="<city name>" --DEST_COUNTRY="<country name>"
+
+Note: <> denotes a placeholder, eg. Replace <airline code> with ETH for Ethiopian Airlines
 
 **OUTPUT:**
 
