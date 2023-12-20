@@ -4,7 +4,7 @@ First WebGL assignment for my graphics class. Exercise in hierarchical modelling
 
 **OUTPUT:**
 
-main.html - contains 512x512 animation as shown below:
+main.html - when opened, shows a 512x512 animation (plays immediately).
 
 https://github.com/03karenxu/school-projects/assets/117241687/02ffe7e6-84c1-4d4f-92bd-50ec3de5fc34
 
