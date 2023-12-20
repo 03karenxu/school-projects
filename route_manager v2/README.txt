@@ -6,7 +6,7 @@ To run:
         - QUESTION accepts qi, 1 <= i <= 5
         - GRAPH_TYPE accepts either pie, or bar
 
-    > python route_manager.py --AIRLINES="<yaml file>" --AIRPORTS="<yaml file>" --ROUTES="<yaml file>" --QUESTION="<q1-q5>" --GRAPH_TYPE="<bar/pie>"
+    $ python route_manager.py --AIRLINES="<yaml file>" --AIRPORTS="<yaml file>" --ROUTES="<yaml file>" --QUESTION="<q1-q5>" --GRAPH_TYPE="<bar/pie>"
 
 Output:
 

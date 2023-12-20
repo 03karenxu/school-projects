@@ -4,7 +4,7 @@ Assignment for a software engineering course. Requires a csv file in the same di
 
 To compile:
 
-    > gcc route_manager.c -o route_manager
+    $ gcc route_manager.c -o route_manager
 
 To run:
 
@@ -12,11 +12,11 @@ To run:
 
     Note: <> denotes a placeholder, eg. Replace <airline code> with ETH for Ethiopian Airlines
 
-    1) > ./route_manager --DATA="<csv file>" --AIRLINE="<airline code>" --DEST_COUNTRY="<country name>"`
+    1) $ ./route_manager --DATA="<csv file>" --AIRLINE="<airline code>" --DEST_COUNTRY="<country name>"`
 
-    2) > ./route_manager --DATA="<csv file>" --SRC_COUNTRY="<country name>" --DEST_CITY="<city name>" --DEST_COUNTRY="<country name>"
+    2) $ ./route_manager --DATA="<csv file>" --SRC_COUNTRY="<country name>" --DEST_CITY="<city name>" --DEST_COUNTRY="<country name>"
     
-    3) > ./route_manager --DATA="<csv file>" --SRC_CITY="<city name>" --SRC_COUNTRY="<country name>" --DEST_CITY="<city name>" --DEST_COUNTRY="<country name>"
+    3) $ ./route_manager --DATA="<csv file>" --SRC_CITY="<city name>" --SRC_COUNTRY="<country name>" --DEST_CITY="<city name>" --DEST_COUNTRY="<country name>"
 
 Output:
 
