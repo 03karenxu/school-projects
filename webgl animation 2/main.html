@@ -9,14 +9,12 @@ in vec3 vNormal;
 in vec4 vColor;
 in vec2 vTexCoord1;
 in vec2 vTexCoord2;
-in vec2 vTexCoord3;
 
 out vec4 fPosition;
 out vec3 fNormal;
 out vec4 fColor;
 out vec2 fTexCoord1;
 out vec2 fTexCoord2;
-out vec2 fTexCoord3;
 
 uniform vec4 ambientProduct, diffuseProduct, specularProduct;
 uniform mat4 modelViewMatrix;
@@ -39,19 +37,14 @@ main()
     float amp = 0.05;
     float offset = amp*cos(time/speed);
 
-    //move x and y coordinates of texture 2 (clouds)
-    float x2 = (vTexCoord2.x+offset)*0.4;
-    float y2 = vTexCoord2.y+offset;
-
     //move x and y coordinates of texture 3 (water)
-    float x3 = vTexCoord3.x-offset;
-    float y3 = vTexCoord3.y;
+    float x3 = vTexCoord2.x-offset;
+    float y3 = vTexCoord2.y;
 
     gl_Position = projectionMatrix * modelViewMatrix * vPosition;
     
 	fTexCoord1 = vTexCoord1;
-    fTexCoord2 = vec2(x2,y2);
-    fTexCoord3 = vec2(x3,y3);
+    fTexCoord2 = vec2(x3,y3);
     fColor = vColor;
     fNormal = N;
     fPosition = vec4(pos,1.0);
@@ -67,13 +60,11 @@ uniform sampler2D texture2;
 uniform sampler2D texture3;
 uniform int grassTexture;
 uniform bool grayScale;
-uniform int cloudTexture;
 uniform int waterTexture;
 
 in vec4 fColor;
 in vec2 fTexCoord1;
 in vec2 fTexCoord2;
-in vec2 fTexCoord3;
 in vec4 fPosition;
 in vec3 fNormal;
 
@@ -120,16 +111,10 @@ main()
 		fragColor = shading;
 	}
     
-    if(cloudTexture == 1)
+    if(waterTexture == 1)
     {
         vec4 alphaTextureColor = texture( texture2, fTexCoord2 );
 		fragColor = texture( texture2, fTexCoord2 ) * shading;
-	}
-
-    if(waterTexture == 1)
-    {
-        vec4 alphaTextureColor = texture( texture3, fTexCoord3 );
-		fragColor = texture( texture3, fTexCoord3 ) * shading;
 	}
     
     //shader effect: grayScale

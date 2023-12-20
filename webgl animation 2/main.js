@@ -69,9 +69,6 @@ var bouncingCubePosition = [0,4,0];
 var bouncyBallVelocity = 0;
 var gravity = -9.8;
 
-//clouds
-var cloudPosition= [0,0,0];
-
 //scene changes
 var flying = 7.5*seconds;
 var ballUp = false;
@@ -85,7 +82,6 @@ var frameRate;
 
 //shader
 var grassTexture = 0;
-var cloudTexture = 0;
 var waterTexture = 0;
 var grayScale = 0;
 
@@ -275,22 +271,14 @@ function initTexturesForExample() {
     loadFileTexture(textureArray[textureArray.length-1],"grass.png") ;
     
     textureArray.push({}) ;
-    loadFileTexture(textureArray[textureArray.length-1],"clouds.png") ;
-
-    textureArray.push({}) ;
     loadFileTexture(textureArray[textureArray.length-1],"water.png") ;
+
 }
 
 // Turn grass texture use on and off
 function toggleTextureGrass() {
     grassTexture = (grassTexture + 1) % 2;
 	gl.uniform1i(gl.getUniformLocation(program, "grassTexture"), grassTexture);
-}
-
-// Turn cloud texture use on and off
-function toggleTextureCloud() {
-    cloudTexture = (cloudTexture + 1) % 2;
-	gl.uniform1i(gl.getUniformLocation(program, "cloudTexture"), cloudTexture);
 }
 
 // Turn water texture use on and off
@@ -811,54 +799,7 @@ function drawDog(frames,dt){
     gPop();
 }
 
-//draws a cloud
-function drawCloud(){
-    setColor(vec4(1.0,1.0,1.0,1.0)); 
-    gPush();
-    {
-        gPush();
-        {
-            gRotate(90,0,1,0);
-            gScale(1,1,1.5);
-            drawSphere();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-2,0,0);
-            gRotate(90,0,1,0);
-            gScale(1,1,1.5);
-            drawSphere();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-1,1,0);
-            gRotate(90,0,1,0);
-            gScale(1,1,1.5);
-            drawSphere();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-1,0,1);
-            gRotate(90,0,1,0);
-            gScale(1,1,1.5);
-            drawSphere();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-1,0,-1.5);
-            gScale(0.6,0.6,0.6);
-            drawSphere();
-        }
-        gPop();
-    }
-    gPop();
-}
-
-//draws all landscape elements (ground, clouds, pond)
+//draws all landscape elements (ground, pond)
 function drawLandscape(){
     //ground
     gPush();
@@ -911,59 +852,7 @@ function drawLandscape(){
         gPop();
         toggleTextureGrass();
     }
-    gPop();
-    //clouds
-    gPush();
-    {
-        //move clouds back and forth along the x-axis
-        cloudPosition[1] = cloudPosition[1] + wave(0.01,800,0,frames);
-        cloudPosition[2] = cloudPosition[2] - wave(0.01,800,0,frames);
-        toggleTextureCloud();
-        gPush();
-        {
-            gTranslate(-2+cloudPosition[1],10,-5);
-            drawCloud();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-30+cloudPosition[2],40,0);
-            drawCloud();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(6+cloudPosition[1],25,5);
-            drawCloud();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(5+cloudPosition[2],10,-30);
-            drawCloud();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(50+cloudPosition[1],5,-40);
-            drawCloud();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-30+cloudPosition[2],30,-40);
-            drawCloud();
-        }
-        gPop();
-        gPush();
-        {
-            gTranslate(-35+cloudPosition[1],40,40);
-            drawCloud();
-        }
-        gPop();
-        toggleTextureCloud();
-    }
-    gPop();
+    gPop()
     //pond
     gPush();
     {
@@ -1075,10 +964,6 @@ function render(timestamp) {
 	gl.activeTexture(gl.TEXTURE1);
 	gl.bindTexture(gl.TEXTURE_2D, textureArray[1].textureWebGL);
 	gl.uniform1i(gl.getUniformLocation(program, "texture2"), 1);
-
-    gl.activeTexture(gl.TEXTURE2);
-	gl.bindTexture(gl.TEXTURE_2D, textureArray[2].textureWebGL);
-	gl.uniform1i(gl.getUniformLocation(program, "texture3"), 2);
 	
 	// Now let's draw a shape animated!
 	// You may be wondering where the texture coordinates are!
