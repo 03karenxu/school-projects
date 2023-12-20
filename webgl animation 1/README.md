@@ -1,6 +1,6 @@
 **README**
 
-First WebGL assignment for my graphics class. Exercise in hierarchical modelling and real-time animation in the GPU pipeline. Files in the common directory and in object.js and vertex shader were provided by the teaching staff.
+First WebGL assignment for my graphics class. Exercise in hierarchical modelling and real-time animation in the GPU pipeline. Files in the common directory, object.js, and the vertex shader were provided by the teaching staff.
 
 **OUTPUT:**
 
