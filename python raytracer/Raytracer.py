@@ -299,8 +299,20 @@ def main():
         return
     
     # get file name
-    fn = sys.argv[1] 
-    scene = parse_scene_file(fn)   
+    input_directory = "Tests-and-Keys"
+    fn = sys.argv[1]
+    full_path = input_directory + "/" + fn
+
+    # check if file exists
+    try:
+        with open(full_path, 'r'):
+            pass
+    except FileNotFoundError:
+        print(f"File not found: {full_path}")
+        sys.exit()
+
+    # parse scene from the input file
+    scene = parse_scene_file(full_path)
     
     # set image
     width = scene.res_x
