@@ -1,6 +1,7 @@
 **README**
 
-**Date complete: April 9th, 2023**
+**Date complete: April 9th, 2023**<br>
+
 C programing assignment for my computer architecture class. Exercise in working with timers, interrupts, and LEDs using the C programming language. Skeleton provided by teaching staff (DO NOT TOUCH sections).
 
 **FEATURES:**
