@@ -1,5 +1,7 @@
 **README**
 
+**Date completed: April 9th, 2023**
+
 Assignment for my software engineering course. Consists of three parts:
 
 1) Object-oriented python project that generates an HTML-SVG document.
