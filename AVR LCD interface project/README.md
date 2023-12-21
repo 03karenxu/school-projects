@@ -1,6 +1,6 @@
 **README**
 
-**Date completed: 03/29/2023**<br>
+**Date completed: March 29th, 2023**<br>
 
 Assignment for my computer architecture class. Objectives specified in the assignment writeup were:
 
