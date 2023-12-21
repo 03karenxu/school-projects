@@ -1,5 +1,7 @@
 **README**
- 
+
+**Date completed: March 26th, 2023**
+
 Exercise in C programming, memory allocaton, .yaml data analysis, and makefile usage.
 
 Requires a .yaml file with the route, airline, and airport information as formatted in the given example file.
