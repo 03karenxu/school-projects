@@ -2,8 +2,8 @@
  * CSC Fall 2022
  * 
  * Student name: Karen Xu
- * Student UVic ID: V00985737
- * Date of completed work:
+ * Student UVic ID: 
+ * Date of completed work: April 9, 2023
  *
  *
  * Code provided for Assignment #4
