@@ -1,5 +1,7 @@
 **README**
 
+**Date completed: October 16th, 2023**
+
 First WebGL assignment for my graphics class. Exercise in hierarchical modelling and real-time animation in the GPU pipeline. Files in the common directory, object.js, and the vertex shader were provided by the teaching staff.
 
 **OUTPUT:**
