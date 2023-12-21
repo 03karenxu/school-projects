@@ -1,5 +1,7 @@
 **README**
 
+**Date completed: February 15th, 2023**
+
 Assignment for a software engineering course. Exercise in C programming and .csv data analysis. 
 
 Requires a .csv file in the same directory which contains a list of airline routes, formatted as
