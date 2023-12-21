@@ -1,5 +1,7 @@
 **README**
 
+**Date completed: 03/29/2023**<br>
+
 Assignment for my computer architecture class. Objectives specified in the assignment writeup were:
 
 *  Use multiple AVR 16-bit timers.
