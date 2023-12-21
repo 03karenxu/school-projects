@@ -1,7 +1,6 @@
 **README**
 
-C programing assignment for my computer architecture class. Exercise in working with timers, interrupts, and LEDs using the C programming
-language.
+C programing assignment for my computer architecture class. Exercise in working with timers, interrupts, and LEDs using the C programming language. Skeleton provided by teaching staff (DO NOT TOUCH sections).
 
 **FEATURES:**
 - LED control functions for turning LEDs on/off based on specific patterns.
