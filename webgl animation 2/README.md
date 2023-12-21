@@ -1,5 +1,7 @@
 **README**
 
+**Date completed: November 6th, 2023**
+
 Second assignment for my graphics class. Exercise in WebGL fragment shading, texture use, shader effects, modelling, and camera manipulation. Files in the Common directory and object.js were provided by the teaching staff.
 
 **TO RUN:**
